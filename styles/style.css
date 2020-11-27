@@ -1,3 +1,24 @@
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+footer,
+header,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -23,15 +44,15 @@
 
 .logo {
   width: 183px;
-  height: 32px;
 }
 
 .logo_place_header {
+  height: 32px;
   position: absolute;
   top: 30px;
   left: 64px;
   z-index: 1;
-  /* нужен ли добавить позиционирование в лого или оставить тут? */
+  background-image: url(../images/logo_place_header.svg);
 }
 
 .header__title {
@@ -87,7 +108,7 @@
 .description {
   display: flex;
   justify-content: center;
-  padding: 100px 0;
+  padding: 100px 0 0;
 }
 
 .two-columns {
@@ -191,6 +212,7 @@
 .feynman {
   height: 790px;
   position: relative;
+  background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
   background-size: 867px 637px;
   background-position: bottom left;
@@ -261,7 +283,7 @@
   min-height: 350px;
   background-color: #1f1f1f;
   color: #fff;
-  padding: 60px 0 40px 0;
+  padding: 60px 0 40px;
   display: flex;
   justify-content: center;
 }
@@ -275,6 +297,12 @@
 
 .footer__column_content_copyright {
   flex-basis: 711px;
+}
+
+.logo_place_footer {
+  height: 35px;
+  background-image: url(../images/logo_place_footer.svg);
+  background-size: cover;
 }
 
 .footer__author {
@@ -306,19 +334,13 @@
   font-weight: 300;
 }
 
-.footer__column-link {
-  text-decoration: none;
-  color: #fff;
-}
-
 .footer__social-icon {
   width: 16px;
   height: 16px;
   margin-right: 10px;
 }
 
-.logo_place_footer {
-  width: 183px;
-  height: 35px;
-  background-image: url(../images/logo_place_footer.svg);
+.footer__column-link {
+  text-decoration: none;
+  color: #fff;
 }
