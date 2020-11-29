@@ -1,24 +1,3 @@
-html,
-body,
-div,
-span,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-img,
-footer,
-header,
-section {
-  margin: 0;
-  padding: 0;
-  border: 0;
-}
-
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -40,9 +19,11 @@ section {
   display: flex;
   position: relative;
   background-color: #f2f2f2;
+  z-index: 1;
 }
 
 .logo {
+  display: block;
   width: 183px;
 }
 
@@ -51,15 +32,13 @@ section {
   position: absolute;
   top: 30px;
   left: 64px;
-  z-index: 1;
   background-image: url(../images/logo_place_header.svg);
 }
 
 .header__title {
   width: 730px;
   align-self: center;
-  margin-left: 64px;
-  z-index: 2;
+  margin: 0 0 0 64px;
   /* font-style */
   line-height: 96px;
   font-size: 102px;
@@ -71,16 +50,20 @@ section {
   position: absolute;
   bottom: 30px;
   left: 64px;
-  z-index: 2;
+  margin: 0;
   /* font-style */
   line-height: 25px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .header__link {
   text-decoration: none;
   color: #2f80ed;
+}
+
+.header__link:hover {
+  color: #215ead;
 }
 
 .header__main-illustration {
@@ -91,7 +74,7 @@ section {
   position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
+  z-index: -1;
 }
 
 .header__square-pic {
@@ -101,6 +84,7 @@ section {
   position: absolute;
   top: 64px;
   right: 0;
+  z-index: -2;
 }
 
 /* Description */
@@ -121,10 +105,11 @@ section {
 .two-columns__brief {
   width: 175px;
   color: #2f80ed;
+  margin: 0;
   /* font-style */
   line-height: 1.2;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .two-columns__main-text {
@@ -133,7 +118,11 @@ section {
   /* font-style */
   line-height: 34px;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
+}
+
+.two-columns__paragraph {
+  margin: 0;
 }
 
 .two-columns__paragraph:not(:last-of-type) {
@@ -159,7 +148,7 @@ section {
 .section-title {
   width: 60%;
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   /* font-style */
   line-height: 1.15;
   font-size: 60px;
@@ -169,11 +158,11 @@ section {
 .section-subtitle {
   width: 60%;
   text-align: center;
-  margin-bottom: 0;
+  margin: 0;
   /* font-style */
   line-height: 34px;
   font-size: 24px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .table {
@@ -182,6 +171,9 @@ section {
   justify-content: space-between;
   flex-wrap: wrap;
   z-index: 1;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .table__cell {
@@ -193,6 +185,7 @@ section {
 }
 
 .table__heading {
+  margin: 0;
   /* font-style */
   line-height: 1.15;
   font-size: 24px;
@@ -200,17 +193,17 @@ section {
 }
 
 .table__text {
-  margin-top: 20px;
+  margin: 20px 0 0 0;
   /* font-style */
   line-height: 1.2;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Feynman */
 
 .feynman {
-  height: 790px;
+  min-height: 790px;
   position: relative;
   background-color: #f2f2f2;
   background-image: url(../images/feynman.png);
@@ -220,11 +213,12 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 100px;
 }
 
 .feynman__title {
   width: 648px;
-  margin: 100px 0 70px 0;
+  margin: 0 0 70px 0;
   text-align: center;
   /* font-style */
   line-height: 1.15;
@@ -233,10 +227,11 @@ section {
 }
 
 .feynman__subtitle {
+  margin: 0;
   /* font-style */
   line-height: 51px;
   font-size: 36px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .feynman__link {
@@ -247,8 +242,12 @@ section {
   /* font-style */
   font-size: 36px;
   line-height: 43px;
-  font-weight: 300;
+  font-weight: 400;
   text-decoration: none;
+}
+
+.feynman__link:hover {
+  color: #215ead;
 }
 
 /* Kaufman */
@@ -262,14 +261,18 @@ section {
   overflow: hidden;
   color: #fff;
   padding: 90px 0;
+  z-index: 1;
 }
 
 .kaufman__triangle {
   width: 877px;
   height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: cover;
   position: absolute;
   top: 0;
   right: -210px;
+  z-index: -1;
 }
 
 .table__cell_theme_dark {
@@ -286,6 +289,7 @@ section {
   padding: 60px 0 40px;
   display: flex;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .footer__columns {
@@ -297,27 +301,27 @@ section {
 
 .footer__column_content_copyright {
   flex-basis: 711px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .logo_place_footer {
   height: 35px;
   background-image: url(../images/logo_place_footer.svg);
-  background-size: cover;
 }
 
 .footer__author {
-  display: flex;
-  position: absolute;
-  bottom: 0;
-  left: 0;
   margin: 18px 0;
   /* font-style*/
   line-height: 25px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .footer__column-heading {
+  margin: 0;
   /* font-style*/
   line-height: 30px;
   font-size: 18px;
@@ -328,10 +332,12 @@ section {
   display: flex;
   flex-direction: column;
   margin: 20px 0 16px 0;
+  list-style-type: none;
+  padding: 0;
   /* font-style*/
   line-height: 30px;
   font-size: 18px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .footer__social-icon {
@@ -343,4 +349,8 @@ section {
 .footer__column-link {
   text-decoration: none;
   color: #fff;
+}
+
+.footer__column-link:hover {
+  color: #c7c5c7;
 }
