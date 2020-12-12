@@ -1,3 +1,5 @@
+@import url(../vendor/normalize.css);
+
 /* Blocks */
 
 @import url(../blocks/cards/cards.css);
@@ -41,6 +43,7 @@
 @import url(../blocks/footer/__column-links/footer__column-links.css);
 @import url(../blocks/footer/__columns/footer__columns.css);
 @import url(../blocks/footer/__social-icon/footer__social-icon.css);
+@import url(../blocks/footer/__column/footer__column.css);
 
 /* Header elements */
 @import url(../blocks/header/__link/header__link.css);
@@ -79,15 +82,15 @@
 @import url(../blocks/two-columns/__span-accent/two-columns__span-accent.css);
 
 /* Video elements */
-@import url(../blocks/video/video__iframes/video__iframes.css);
-@import url(../blocks/video/video__iframe/video__iframe.css);
+@import url(../blocks/video/__iframes/video__iframes.css);
+@import url(../blocks/video/__iframe/video__iframe.css);
 
 /* Modifiers */
 
 /* Footer modifiers */
-@import url(../blocks/footer/__columns/_content/footer__column_content_copyright.css);
-@import url(../blocks/footer/__columns/_content/footer__column_content_info.css);
-@import url(../blocks/footer/__columns/_content/footer__column_content_social.css);
+@import url(../blocks/footer/__column/_content/footer__column_content_copyright.css);
+@import url(../blocks/footer/__column/_content/footer__column_content_info.css);
+@import url(../blocks/footer/__column/_content/footer__column_content_social.css);
 
 /* Logo modifiers */
 @import url(../blocks/logo/_place/logo_place_header.css);
@@ -95,3 +98,9 @@
 
 /* Table modifiers */
 @import url(../blocks/table/__cell/_theme/table__cell_theme_dark.css);
+
+/* Section-title modifiers */
+@import url(../blocks/section-title/_theme/section-title_theme_dark.css);
+
+/* Section-subtitle modifiers */
+@import url(../blocks/section-subtitle/_theme/section-subtitle_theme_dark.css);
