@@ -1,0 +1,7 @@
+.video {
+  max-height: 439px;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
