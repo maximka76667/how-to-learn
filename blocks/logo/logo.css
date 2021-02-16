@@ -1,10 +1,4 @@
 .logo {
   display: block;
   width: 183px;
-  opacity: 1;
-  transition: opacity .2s ease-in-out;
-}
-
-.logo:hover {
-  opacity: .5;
 }
